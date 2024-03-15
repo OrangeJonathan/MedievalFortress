@@ -1739,9 +1739,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1515025619}
   - component: {fileID: 1515025618}
-  - component: {fileID: 1515025620}
   m_Layer: 0
-  m_Name: LevelManager
+  m_Name: Waypoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1781,22 +1780,6 @@ Transform:
   - {fileID: 467145609}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1515025620
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1515025617}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c7beec419755264c87ed42ef5ede6f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 5938176632025863027, guid: 98ffffb45a2a1014d91a2df6e8469343, type: 3}
-  spawnPoint: {fileID: 214898451}
-  timeBetweenWaves: 5.5
-  waveCountDownText: {fileID: 1335974323}
 --- !u!1001 &1601849378
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1920,6 +1903,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5019521670124042984, guid: 3edb746aa760a7c47b833591f45ed23a, type: 3}
   m_PrefabInstance: {fileID: 866302099}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1739130718
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1739130719}
+  m_Layer: 0
+  m_Name: Waypoints
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1739130719
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739130718}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.1136265, y: -40.39734, z: -66.23903}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1743076798
 GameObject:
   m_ObjectHideFlags: 0
@@ -2100,6 +2114,68 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1892112995
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1892112997}
+  - component: {fileID: 1892112996}
+  - component: {fileID: 1892112998}
+  m_Layer: 0
+  m_Name: GameMaster
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1892112996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892112995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7beec419755264c87ed42ef5ede6f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 5938176632025863027, guid: 98ffffb45a2a1014d91a2df6e8469343, type: 3}
+  spawnPoint: {fileID: 214898451}
+  timeBetweenWaves: 5.5
+  waveCountDownText: {fileID: 1335974323}
+--- !u!4 &1892112997
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892112995}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.9000015, y: 0.125, z: 0.125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1892112998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892112995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1a60902e559a044eb44fd3695efd49c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  standardTowerPrefab: {fileID: 8358253724705604465, guid: 2e8c256c2ed34ed4d94ac8e5228abb10, type: 3}
 --- !u!1001 &1896406386
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2516,6 +2592,7 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1892112997}
   - {fileID: 1515025619}
   - {fileID: 734805104}
   - {fileID: 531354673}
@@ -2525,3 +2602,4 @@ SceneRoots:
   - {fileID: 964995328}
   - {fileID: 1971935491}
   - {fileID: 1792869383}
+  - {fileID: 1739130719}

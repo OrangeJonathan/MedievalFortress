@@ -17,10 +17,12 @@ public class CameraController : MonoBehaviour
         if (Input.GetKeyDown("1"))
         {
             CameraOne();
+            Cursor.lockState = CursorLockMode.None;
         }
         if (Input.GetKeyDown("2"))
         {
             CameraTwo();
+            Cursor.lockState = CursorLockMode.Locked;
         }
     }
 
