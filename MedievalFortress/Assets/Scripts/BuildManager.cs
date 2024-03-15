@@ -25,7 +25,7 @@ public class BuildManager : MonoBehaviour
 
     private GameObject towerToBuild;
 
-    public GameObject getTowerToBuild()
+    public GameObject GetTowerToBuild()
     {
         return towerToBuild;
     }
