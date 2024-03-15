@@ -6,9 +6,16 @@ public class CameraController : MonoBehaviour
 {
     public GameObject camera1;
     public GameObject camera2;
-    void Start()
+    public static CameraController instance;
+
+    void Awake()
     {
-        
+        if (instance != null)
+        {
+            Debug.LogError("More than one CameraController in scene!");
+            return;
+        }
+        instance = this;
     }
 
     // Update is called once per frame
@@ -24,6 +31,16 @@ public class CameraController : MonoBehaviour
             CameraTwo();
             Cursor.lockState = CursorLockMode.Locked;
         }
+    }
+
+    public GameObject GetCamera1()
+    {
+        return camera1;
+    }
+    
+    public GameObject GetCamera2()
+    {
+        return camera2;
     }
 
     void CameraOne()

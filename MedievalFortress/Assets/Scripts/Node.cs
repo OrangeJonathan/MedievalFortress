@@ -18,20 +18,26 @@ public class Node : MonoBehaviour
 
     void OnMouseDown() 
     {
+        if (CameraController.instance.GetCamera2().activeSelf) return;
         if (tower != null)
         {
             Debug.Log("Can't build there!");
             return;
         }
+
+        GameObject towerToBuild = BuildManager.instance.GetTowerToBuild();
+        tower = Instantiate(towerToBuild, transform.position, Quaternion.identity);
     }
 
     void OnMouseEnter()
     {
+        if (CameraController.instance.GetCamera2().activeSelf) return;
         rend.material.color = hoverColor;
     }
 
     void OnMouseExit()
     {
+        if (CameraController.instance.GetCamera2().activeSelf) return;
         rend.material.color = startColor;
     }
 }
