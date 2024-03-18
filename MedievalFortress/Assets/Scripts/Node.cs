@@ -18,6 +18,17 @@ public class Node : MonoBehaviour
 
     void OnMouseDown() 
     {
+        if (CoinCounter.instance.currentCoins >= 50)
+        {
+            CoinCounter.instance.DecreaseCoins(50);
+        }
+        else
+        {
+            //TODO: add pop-up message to user
+            Debug.Log("Not enough coins!");
+            return;
+        }
+
         if (CameraController.instance.GetCamera2().activeSelf) return;
         if (tower != null)
         {
