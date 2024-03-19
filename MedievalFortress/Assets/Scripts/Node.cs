@@ -18,9 +18,11 @@ public class Node : MonoBehaviour
 
     void OnMouseDown() 
     {
-        if (CoinCounter.instance.currentCoins >= 50)
+        GameObject towerToBuild = BuildManager.instance.GetTowerToBuild();
+
+        if (CoinCounter.instance.currentCoins >= towerToBuild.GetComponent<Tower>().cost)
         {
-            CoinCounter.instance.DecreaseCoins(50);
+            CoinCounter.instance.DecreaseCoins((int)towerToBuild.GetComponent<Tower>().cost);
         }
         else
         {
@@ -36,7 +38,6 @@ public class Node : MonoBehaviour
             return;
         }
 
-        GameObject towerToBuild = BuildManager.instance.GetTowerToBuild();
         tower = Instantiate(towerToBuild, transform.position, Quaternion.identity);
     }
 

@@ -26,7 +26,7 @@ public class CoinCounter : MonoBehaviour
     {
         
     }
-    public void InCreaseCoins(int value) 
+    public void IncreaseCoins(int value) 
     {
         currentCoins += value;
         coinText.text = currentCoins.ToString();
